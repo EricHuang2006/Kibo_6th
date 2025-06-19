@@ -873,6 +873,7 @@ public class YourService extends KiboRpcService {
         Log.i(TAG, "Closest marker: index " + closestIndex + ", distance: " + minDistance);
 
         // Create filtered results with properly cloned data
+        //temp
         List<Mat> filteredCorners = new ArrayList<>();
         Mat selectedCorner = corners.get(closestIndex);
 
