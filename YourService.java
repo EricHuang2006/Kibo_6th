@@ -859,12 +859,12 @@ public class YourService extends KiboRpcService {
             Log.i(TAG, String.format("Marker %d center: (%.1f, %.1f), distance: %.1f",
                     i, markerCenterX, markerCenterY, distance));
 
-//            if (distance < minDistance) {
-//                minDistance = distance;
-//                closestIndex = i;
-//            }
+            if ((AreaId == 1 || AreaId == 4) && distance < minDistance) {
+                minDistance = distance;
+                closestIndex = i;
+            }
 
-            if((AreaId != 3 && markerCenterY < minDistance) || (AreaId == 3 && markerCenterY > minDistance)){
+            if((AreaId == 2 && markerCenterY > minDistance) || (AreaId == 3 && markerCenterY < minDistance)){
                 minDistance = markerCenterY;
                 closestIndex = i;
             }
